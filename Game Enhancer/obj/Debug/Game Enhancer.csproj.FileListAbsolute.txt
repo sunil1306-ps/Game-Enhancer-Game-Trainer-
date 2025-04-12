@@ -1,0 +1,23 @@
+D:\Program Files (x86)\projects\Game Enhancer\Game Enhancer\bin\Debug\Game Enhancer.exe.config
+D:\Program Files (x86)\projects\Game Enhancer\Game Enhancer\bin\Debug\Game Enhancer.exe
+D:\Program Files (x86)\projects\Game Enhancer\Game Enhancer\bin\Debug\Game Enhancer.pdb
+D:\Program Files (x86)\projects\Game Enhancer\Game Enhancer\obj\Debug\Game Enhancer.csproj.AssemblyReference.cache
+D:\Program Files (x86)\projects\Game Enhancer\Game Enhancer\obj\Debug\Game_Enhancer.Form1.resources
+D:\Program Files (x86)\projects\Game Enhancer\Game Enhancer\obj\Debug\Game_Enhancer.Properties.Resources.resources
+D:\Program Files (x86)\projects\Game Enhancer\Game Enhancer\obj\Debug\Game Enhancer.csproj.GenerateResource.cache
+D:\Program Files (x86)\projects\Game Enhancer\Game Enhancer\obj\Debug\Game Enhancer.csproj.CoreCompileInputs.cache
+D:\Program Files (x86)\projects\Game Enhancer\Game Enhancer\obj\Debug\Game Enh.CBC7DFF0.Up2Date
+D:\Program Files (x86)\projects\Game Enhancer\Game Enhancer\obj\Debug\Game Enhancer.exe
+D:\Program Files (x86)\projects\Game Enhancer\Game Enhancer\obj\Debug\Game Enhancer.pdb
+D:\Program Files (x86)\projects\Game Enhancer\Game Enhancer\bin\Debug\Game Enhancer.exe.manifest
+D:\Program Files (x86)\projects\Game Enhancer\Game Enhancer\bin\Debug\Game Enhancer.application
+D:\Program Files (x86)\projects\Game Enhancer\Game Enhancer\obj\Debug\Game Enhancer.exe.manifest
+D:\Program Files (x86)\projects\Game Enhancer\Game Enhancer\obj\Debug\Game Enhancer.application
+D:\Program Files (x86)\projects\Game Enhancer\Game Enhancer\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\Program Files (x86)\projects\Game Enhancer\Game Enhancer\obj\Debug\Game Enhancer.csproj.Fody.CopyLocal.cache
+D:\Program Files (x86)\projects\Game Enhancer\Game Enhancer\bin\Debug\System.Buffers.xml
+D:\Program Files (x86)\projects\Game Enhancer\Game Enhancer\bin\Debug\System.Memory.xml
+D:\Program Files (x86)\projects\Game Enhancer\Game Enhancer\bin\Debug\System.Numerics.Vectors.xml
+D:\Program Files (x86)\projects\Game Enhancer\Game Enhancer\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Program Files (x86)\projects\Game Enhancer\Game Enhancer\obj\Debug\Game_Enhancer.Form2.resources
+D:\Program Files (x86)\projects\Game Enhancer\Game Enhancer\obj\Debug\Game Enhancer.g.resources

@@ -49,7 +49,7 @@ namespace Game_Enhancer
             "13 40 00 00 F0 3F 00 00 80 3F 01 00 00 00 00 00 00 00 ?? ?? ?? ?? 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? 00 09 8A",
             "00 60 40 CD CC 8C 3F 8F C2 F5 3C CD CC CC 3D 06 00 00 00 00 00 00 00 00 00 00 00 00 00 F0 41",
             "00 C0 3F 00 00 00 3F 00 00 80 3F 00 00 00 40",
-            "00 00 A5 43 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 BF"
+            "FF FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF FF FF FF FF FF FF FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 A5 43",
         };
 
 
@@ -264,7 +264,7 @@ namespace Game_Enhancer
                         byte[] originalValue = entity.Value;
 
                         // Restore original value
-                        nexx.SetHeadBytes((address + 40).ToString("X"), "int", BitConverter.ToInt32(originalValue, 0).ToString());
+                        nexx.SetHeadBytes((address + 166L).ToString("X"), "int", BitConverter.ToInt32(originalValue, 0).ToString());
                     }
 
                     Sta.Text = "Aimbot Uninjected Successfully";
@@ -297,7 +297,7 @@ namespace Game_Enhancer
                         int newValue = BitConverter.ToInt32(modifiedValue, 0);
 
                         // Inject modified value
-                        nexx.SetHeadBytes((address + 40).ToString("X"), "int", newValue.ToString());
+                        nexx.SetHeadBytes((address + 166L).ToString("X"), "int", newValue.ToString());
                     }
 
                     Sta.Text = "Injected Aimbot Successfully";
@@ -347,8 +347,8 @@ namespace Game_Enhancer
 
                 foreach (long num in longs)
                 {
-                    string address38 = (num + 44).ToString("X");
-                    string address42 = (num + 40).ToString("X");
+                    string address38 = (num + 170L).ToString("X");
+                    string address42 = (num + 166L).ToString("X");
 
                     // Store original values before modification
                     Byte[] originalBytes = nexx.TraceHead(address38, 4);
@@ -467,14 +467,14 @@ namespace Game_Enhancer
 
             String[] searchPatterns = new String[]
             {
-                "00 60 40 CD CC 8C 3F 8F C2 F5 3C CD CC CC 3D 06 00 00 00 00 00 00 00 00 00 00 00 00 00 F0 41",
-                //"00 00 00 00 41 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00"
+                "FF FF FF FF 07 97 03 00 FA 98 03 00 FF FF FF FF 08 00 00 00 00 00 60 40 CD CC 8C 3F 8F C2 F5 3C CD CC CC 3D 06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 33 33 13 40 00 00 B0 3F 00 00 80 3F 01 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 FF FF FF FF 06 97 03 00 FC 98 03 00 F8 98 03 00 04 00 00 00 00 00 20 40 CD CC 8C 3F 8F C2 F5 3C CD CC CC 3D 04 00 00 00 29 5C 8F 3D 00 00 00 3F 00 00 F0 41 00 00 48 42 00 00 00 3F 33 33 13 40 00 00 D0 3F 00 00 80 3F 01",
+                "02 E3 01 60 A0 E3 01 00 D0 E7 00 00 50 E3"
             };
 
             String[] replacePatterns = new string[]
             {
-                "00 60 40 CD CC 8C 3F 8F C2 F5 3C CD CC CC 3D 06 00 00 00 00 00 F0 FF 00 00",
-                //"00 00 00 00 41 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00"
+                "FF FF FF FF 07 97 03 00 FA 98 03 00 FF FF FF FF 08 00 00 00 00 00 60 40 CD CC 8C 3F 8F C2 F5 3C CD CC CC 3D 06 00 00 00 00 00 80 3f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 33 33 13 40 00 00 B0 3F 00 00 80 3F 01",
+                "02 00 01 60 A0 E3 01 00 D0 E7 00 00 50 E3"
             };
 
             if (guna2Button2.Text == "ON")
@@ -499,20 +499,12 @@ namespace Game_Enhancer
         {
             String[] searchPatterns = new String[]
             {
-                "3F 00 00 80 3E 00 00 00 00 04 00 00 00 00 00 80 3F 00 00 20 41 00 00 34 42 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 0A D7 23 3F 9A 99 99 3F 00 00 80 3F 00 00 00 00 00 00 80 3F 00 00 80 3F 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 00 3F 00 00",
-                "3F 00 00 80 3E 00 00 00 00 04 00 00 00 00 00 80 3F 00 00 20 41 00 00 34 42 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 8F C2 35 3F 9A 99 99 3F 00 00 80 3F 00 00 00 00 00 00 80 3F 00 00 80 3F 00 00",
-                "3F 00 00 80 3E 00 00 00 00 04 00 00 00 00 00 80 3F 00 00 20 41 00 00 34 42 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 9A 99 19 3F CD CC 8C 3F 00 00 80 3F 00 00 00 00 66 66 66 3F 00 00 80 3F 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 80 3F 00 00 80 3F 00 00 00 00 01 00 00 00 0A",
-                "00 00 3F 00 00 80 3E 00 00 00 00 06 00 00 00 CD CC 4C 3F 00 00 20 41 00 00 34 42 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 66 66 66 3F 9A 99 99 3F 00 00 80 3F 00 00 00 00 33 33 93 3F 00 00 80 3F 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 80 3E 00 00 00 00 00 00 80 3F 00 00 80 3F 00 00 80",
-                "42 00 00 70 42 7f 00 00 00 00 00 00 00 00 00 00 3f 00 00 80 3e 00 00 00 00 04 00 00 00 00 00 80 3f 00 00 20 41 00 00 34 42 01"
+                "3F 00 00 80 3E 00 00 00 00 04 00 00 00 00 00 80 3F 00 00 20 41 00 00 34 42 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F"
             };
 
             String[] replacePatterns = new String[]
             {
-                "3F 00 00 80 3E 00 00 00 3D",
-                "3F 00 00 80 3E 00 00 00 3D",
-                "3C 00 00 80 3C 00 00 00 00 04 00 00 00 00 00 80 3F 00 00 20 41 00 00 34 42 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 80",
-                "00 00 3C 00 00 80 3C 00 00 00 00 06 00 00 00 CD CC 4C 3F 00 00 20 41 00 00 34 42 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 66 66 66 3F",
-                "42 00 00 3f 42 3f 00 00 00 00 00 00 00 3f 3f 3f 3b 00 00 29 3d 00 00 00 00 04 00 00 00 00 00 80 3f 00 00 20 41 00 00 34 42 01"
+                "1A 00 00 80 1A 00 00 00 00 04 00 00 00 00 00 80 3F 00 00 20 41 00 00 34 42 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F"
             };
             
             if (guna2Button3.Text == "ON")
@@ -675,12 +667,12 @@ namespace Game_Enhancer
 
             String[] searchPatterns = new String[]
             {
-                "00 C0 3F 00 00 00 3F 00 00 80 3F 00 00 00 40"
+                "C0 3F 00 00 00 3F 00 00 80 3F"
             };
 
             String[] replacePatterns = new string[]
             {
-                "00 C0 30 00"
+                "3D 01 00 00 00 E0 00 00 80 3F"
             };
 
             if (GlitchFireBtn.Text == "ON")
@@ -707,12 +699,12 @@ namespace Game_Enhancer
         {
             String[] searchPatterns = new String[]
             {
-                "00 0A 81 EE 10 0A 10 EE 10 8C BD E8 00 00 7A 44 F0 48 2D E9 10 B0 8D E2 02 8B 2D ED"
+                "7A 44 F0 48 2D E9 10 B0 8D E2 02 8B 2D ED 08 D0"
             };
 
             String[] replacePatterns = new string[]
             {
-                "00 0A 81 EE 10 0A 10 EE 10 8C BD E8 00 80 89 44"
+                "7A FF F0 48 2D E9 10 B0 8D E2 02 8B 2D ED 08 D0"
             };
 
             if (NoRecoilBtn.Text == "ON")
@@ -739,12 +731,14 @@ namespace Game_Enhancer
 
             String[] searchPatterns = new String[]
             {
-                "33 33 13 40 00 00 F0 3F 00 00 80 3F"
+                //"33 33 13 40 00 00 F0 3F 00 00 80 3F"
+                "A0 42 00 00 C0 3F 33 33 13 40 00 00 F0 3F 00 00 80 3F"
             };
 
             String[] replacePatterns = new string[]
             {
-                "FF B1 FF FF 01 01 FF 3F 0F 0F 99 5F"
+                //"FF B1 FF FF 01 01 FF 3F 0F 0F 99 5F"
+                "A0 42 00 00 C0 3F 33 33 13 40 00 00 F0 3F 00 00 80 4C"
             };
 
             if (ScopeTrackBtn.Text == "ON")
@@ -1011,6 +1005,33 @@ namespace Game_Enhancer
             }
         }
 
+        private void guna2Button7_Click(object sender, EventArgs e)
+        {
+            String[] searchPatterns = new String[]
+            {
+                "10 4C 2D E9 08 B0 8D E2 0C 01 9F E5 00 00 8F E0 00 00 D0 E5 00 00 50 E3 06 00 00 1A FC 00 9F E5 00 00 9F E7 00 00 90 E5"
+            };
+
+            String[] replacePatterns = new string[]
+            {
+                "01 00 A0 E3 1E FF 2F E1"
+            };
+
+            if (guna2Button7.Text == "ON")
+            {
+
+                toggleBytes(searchPatterns, replacePatterns, true);
+                guna2Button7.Text = "OFF";
+
+            }
+            else
+            {
+
+                toggleBytes(searchPatterns, replacePatterns, false);
+                guna2Button7.Text = "ON";
+
+            }
+        }
     }
 
 }

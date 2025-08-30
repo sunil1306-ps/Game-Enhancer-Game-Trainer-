@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Game Enhancer.exe" size="1457088">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Game Enhancer.exe" size="1456064">
       <assemblyIdentity name="Game Enhancer" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>rh2sVR4vse0db7jSeVmTDeakfH4k8JJNuOEXMvObw0I=</dsig:DigestValue>
+        <dsig:DigestValue>+D9sPmRhTHRAp0yxkQV0PivgmG/HFSNz27ho/ziK5zY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
